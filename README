@@ -1,0 +1,22 @@
+Hi there :) in this repo you can see implemented custom http Handler with small wrappers:
+- Context
+- Error handler
+- Middleware
+    - Rate limiter
+
+Note: I added examples folder where I wrote parser of the list of URLs, the main handler wrapped by rate 100/min, have a fun :)
+
+How to setup:
+- git clone https://github.com/bolom009/LnD.git
+- cd to dir
+- go mod tidy
+
+How to run:
+- go run examples/parser/main.go (send the request to http://localhost:8080 with body of urls and enjoy)
+- go test ./... -coverprofile cover.out && go tool cover -html=cover.out (command for test coverage)
+
+Erroneous situations:
+1) For any parsers we should use proxy, als need to add more metadata for prevent ban (that's why in test not need to use prepared public urls)
+2) For parsing sites need to set up context timeout for prevent request (don't see this case in description so I skipped it)
+3) The list of URLs could be very long, so perhaps we need to use worker pool for controlling resources (the same, don't see the case)
+
