@@ -7,7 +7,7 @@ Hi there :) in this repo you can see implemented custom http Handler with small 
 Note: I added examples folder where I wrote parser of the list of URLs, the main handler wrapped by rate 100/min, have a fun :)
 
 How to setup:
-- git clone https://github.com/bolom009/LnD.git
+- git clone https://github.com/bolom009/web.git
 - cd to dir
 - go mod tidy
 
